@@ -1,0 +1,16 @@
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: lightgray;
+}
+
+.middle {
+  background: white;
+  padding: 20px;
+}
+
+.inner {
+  border: 2px solid black;
+}
