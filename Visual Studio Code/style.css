@@ -1,13 +1,23 @@
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .container{
-    width: 150px;
-    border: solid black;
-    margin: auto;
+  border: 2px solid black;
+   justify-content: center;
+   align-items: center;
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
+.caixa{
+   
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+}
+
+.caixa:nth-child(1) { background: lightcoral; }
+.caixa:nth-child(2) { background: lightblue; }
+.caixa:nth-child(3) { background: lightgreen; }
+.caixa:nth-child(4) { background: orange; }
+.caixa:nth-child(5) { background: violet; }
+.caixa:nth-child(6) { background: gold; }
