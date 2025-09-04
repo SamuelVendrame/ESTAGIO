@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array = [1, 2, 3, 4, 5]
+
+        function processarArray(array, callback){
+               array.forEach(element => {
+                     callback(element)
+                });
+        }
+
+        function dobrarNumero(element){
+            console.log("O resultado do array dobrado é: ", element * 2)
+        }
+
+        processarArray(array, dobrarNumero)
+    </script>
+</body>
+</html>
