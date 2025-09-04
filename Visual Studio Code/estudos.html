@@ -20,7 +20,22 @@
   </div>
 
 
+
   <script>
+    function carregarDados(callback){
+      let nome = prompt("Digite seu nome")
+      alert('Processando...');
+    setTimeout(() => {
+      callback(nome)
+    }, 3000);
+      
+    }
+
+    function mensagemFinal(nome){
+      alert("Mensagem carregada, bem vindo sr "+ nome)
+    }
+
+    carregarDados(mensagemFinal)
   </script>
 </body>
 </html>
