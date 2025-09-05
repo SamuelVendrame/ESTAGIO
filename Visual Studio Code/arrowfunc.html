@@ -6,17 +6,38 @@
     <title>Document</title>
 </head>
 <body>
+
+    <h>BOTÕES FUNCIONAIS!!!</h>
+    <button onclick="cronometro.iniciar()">INICIAR</button>
+    <button onclick="cronometro.parar()">PAUSAR</button>
+    <button onclick="cronometro.resetar()">FINALIZAR</button>
+
     <script>
-        const relogio = {
+
+        const cronometro = {
             segundos: 0,
+            contador: null,
+
             iniciar: function(){
-                const timeOut = setTimeout(() => {
-                    this.segundos++
-                    console.log("Segundos: ", this.segundos)
-                }, 5000)
+                this.contador = setInterval(() => {
+                    this.segundos++;
+                    console.log("Contador: ", this.segundos)
+                }, 1000)
+            },
+
+            parar: function(){
+                clearInterval(this.contador)
+                console.log("O contador foi parado em: ", this.segundos)    
+            },
+
+            resetar: function(){
+                this.segundos = 0;
+                console.log("O contador foi resetado.")
             }
-        }
-        relogio.iniciar()
+
+
+            }
+
     </script>
 </body>
 </html>
