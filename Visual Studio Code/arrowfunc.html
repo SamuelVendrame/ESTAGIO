@@ -7,19 +7,18 @@
 </head>
 <body>
     <script>
-        const array = [1, 2, 3, 4, 5]
-
-        function processarArray(array, callback){
-               array.forEach(element => {
-                     callback(element)
-                });
+        const carro = {
+            marca: "Ferrari",
+            modelo: "F8",
+            detalhes: function(){
+                mostrar = () => {
+                    console.log("Esse carro é uma" + this.marca + this.modelo )
+                    
+                }
+                mostrar()
+            }
         }
-
-        function dobrarNumero(element){
-            console.log("O resultado do array dobrado é: ", element * 2)
-        }
-
-        processarArray(array, dobrarNumero)
+        carro.detalhes()
     </script>
 </body>
 </html>
