@@ -7,18 +7,16 @@
 </head>
 <body>
     <script>
-        const carro = {
-            marca: "Ferrari",
-            modelo: "F8",
-            detalhes: function(){
-                mostrar = () => {
-                    console.log("Esse carro é uma" + this.marca + this.modelo )
-                    
-                }
-                mostrar()
+        const relogio = {
+            segundos: 0,
+            iniciar: function(){
+                const timeOut = setTimeout(() => {
+                    this.segundos++
+                    console.log("Segundos: ", this.segundos)
+                }, 5000)
             }
         }
-        carro.detalhes()
+        relogio.iniciar()
     </script>
 </body>
 </html>
