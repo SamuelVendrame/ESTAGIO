@@ -21,35 +21,26 @@
                     if(livros[i].id === x){ // usando I como índex juntamente ao ID, e comparando-o com a inserção
                     console.log(livros[i]) // printa os valores do livro escolhido
                     
-                    nome = prompt("Digite o novo nome para o livro.")
-                    livros[i].titulo = nome
-                    console.log(livros[i])
                     }
                 }
             }
 
-            function adicionarLivro(){
-                let id = parseInt(prompt("Digite o ID do livro"))
-                let titulo = prompt("Digite o título do livro")
-                let autor = prompt("Digite o autor do livro")
-                let ano = parseInt(prompt("Digite o ano do livro"))
-
-                let novoLivro = {
-                    id: id,
-                    titulo: titulo,
-                    autor: autor,
-                    ano: ano
+            
+            function buscarLivroPorTitulo(titulo){
+                tituloBuscado = prompt("Digite o titulo do livro para buscarmos")
+                for(let livro of livros){
+                    if(livro.titulo === tituloBuscado){
+                        console.log("Livro encontrado! ", tituloBuscado)
+                        break
+                    }
+                    if(livro.titulo !== tituloBuscado){
+                        console.log("Livro não encontrado.")
+                    }
                 }
-
-                livros.push(novoLivro)
-                console.log("Livro adicionado!", livros)
-                console.log(livros)
-
             }
 
 
-        buscarLivroPorId()
-        adicionarLivro()
+        buscarLivroPorTitulo()
     </script>
 
 </body>
