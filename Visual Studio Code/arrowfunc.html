@@ -80,7 +80,18 @@
 
             }
 
-            inserirLivro()
+           function deletarLivro(){
+            const idParaDeletar = parseInt(prompt("Digite o ID do livro a ser deletado"))
+            let indice = livros.findIndex(livros => livros.id === idParaDeletar)
+            if(indice < 0){
+                console.log("Indice inexistente.")
+            }
+            livros.splice(indice, 1)
+            console.log("Livro deletado via ID.")
+            console.log(livros)
+           }
+
+           deletarLivro()
     </script>
 
 </body>
