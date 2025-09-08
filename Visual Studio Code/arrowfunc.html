@@ -44,6 +44,7 @@
                 for(let obj of livros){ // Nesse caso, como estou procurando objeto num array, o ideal é sempre fazer isto, como no código:
                     if(obj.autor === inputAutor){
                         console.log("Autor encontrado!")
+                        console.log("Livro: ", obj.titulo, " Ano: ", obj.ano)
                         encontrado = true
                         break
                     }
