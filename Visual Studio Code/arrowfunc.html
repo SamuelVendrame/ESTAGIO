@@ -54,7 +54,33 @@
                 }
             }
 
-      buscarLivroPorAutor()
+  
+            function inserirLivro(){
+                let titulo = prompt("Digite o nome do novo livro a ser inserido")
+                let autor = prompt("Digite o nome do autor do novo livro a ser inserido")
+                let ano = prompt("Digite o ano do novo livro a ser inserido")
+
+                let maiorId = 0
+                for(let contandoId of livros){
+                    if(contandoId.id > maiorId){
+                        maiorId = contandoId.id
+                    }
+                }
+
+                 
+                const novoLivro = {
+                    id: maiorId + 1,
+                    titulo: titulo,
+                    autor: autor,
+                    ano: ano
+                }
+                
+                livros.push(novoLivro)
+                console.log(livros)
+
+            }
+
+            inserirLivro()
     </script>
 
 </body>
