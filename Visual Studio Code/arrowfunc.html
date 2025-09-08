@@ -33,14 +33,27 @@
                         console.log("Livro encontrado! ", tituloBuscado)
                         break
                     }
-                    if(livro.titulo !== tituloBuscado){
-                        console.log("Livro não encontrado.")
-                    }
+                   
                 }
             }
 
+            function buscarLivroPorAutor(){
+                inputAutor = prompt("Digite o autor para pesquisarmos")
+                let encontrado = false
 
-        buscarLivroPorTitulo()
+                for(let obj of livros){ // Nesse caso, como estou procurando objeto num array, o ideal é sempre fazer isto, como no código:
+                    if(obj.autor === inputAutor){
+                        console.log("Autor encontrado!")
+                        encontrado = true
+                        break
+                    }
+                }
+                if(!encontrado){
+                    console.log("Autor não encontrado.")
+                }
+            }
+
+      buscarLivroPorAutor()
     </script>
 
 </body>
