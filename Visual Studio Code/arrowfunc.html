@@ -9,7 +9,7 @@
 
     <script>
         const livros = [
-                {id: 1, titulo: "Amor", autor: "Pedro", ano: 2025},
+                {id: 1, titulo: "Amor", autor: "Joelho", ano: 2025},
                 {id: 2, titulo: "História", autor: "João", ano: 2013},
                 {id: 3, titulo: "Covarde", autor: "Gabriel", ano: 2018}
         ]
@@ -27,14 +27,20 @@
 
             
             function buscarLivroPorTitulo(titulo){
+                buscar = false
                 tituloBuscado = prompt("Digite o titulo do livro para buscarmos")
                 for(let livro of livros){
                     if(livro.titulo === tituloBuscado){
-                        console.log("Livro encontrado! ", tituloBuscado)
+                        console.log("Livro encontrado! ")
+                        console.log("Livro: ", livro.autor, " Ano: ", livro.ano)
+                        buscar = true
                         break
+                        }
+                    }
+                    if(!buscar){
+                        console.log("Livro não encontrado.")
                     }
                    
-                }
             }
 
             function buscarLivroPorAutor(){
@@ -86,12 +92,34 @@
             if(indice < 0){
                 console.log("Indice inexistente.")
             }
+            else{
             livros.splice(indice, 1)
             console.log("Livro deletado via ID.")
             console.log(livros)
+            }
            }
 
-           deletarLivro()
+           function atualizarLivro(){
+           const idParaAtualizar = parseInt(prompt("Digite o ID do livro a ser atualizado"))
+           let indice = livros.findIndex(livros => livros.id === idParaAtualizar)
+            if(indice < 0){
+                console.log("Indice inexistente.")
+                return
+            }
+        
+
+            let novoNome = prompt("Digite o novo NOME do livro.")
+            livros[indice].titulo = novoNome
+            let novoAutor = prompt("Digite o nome do novo AUTOR")
+            livros[indice].autor = novoAutor
+            let novoAno = parseInt(prompt("Digite o novo ANO do livro"))
+            livros[indice].ano = novoAno 
+            let novoID = parseInt(prompt("Digite o novo ID do livro"))
+            livros[indice].id = novoID
+           }
+
+           atualizarLivro()
+           console.log(livros)
     </script>
 
 </body>
