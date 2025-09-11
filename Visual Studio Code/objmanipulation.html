@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const livros = [
+                {id: 1, titulo: "Amor", autor: "Joelho", ano: 2025},
+                {id: 2, titulo: "História", autor: "João", ano: 2013},
+                {id: 3, titulo: "Covarde", autor: "Gabriel", ano: 2018}
+        ]
+        let tituloInput = prompt("Digite o titulo e veremos se ele esta na lista")
+        let encontrado = false
+        function funcBuscaTitulo(x){
+            for(let titulos of livros){
+                if(titulos.titulo === tituloInput){
+                    let encontrado = true
+                    console.log("Livro encontrado! Autor: "+ titulos.autor +" Ano: " + titulos.ano)
+                    return
+                }
+                else if(!encontrado){
+                    console.log("Livro não encontrado.")
+                }
+                else{
+                    console.log("Valor inválido.")
+                }
+            }
+        }
+        
+        funcBuscaTitulo(tituloInput)
+        </script>
+</body>
+</html>
