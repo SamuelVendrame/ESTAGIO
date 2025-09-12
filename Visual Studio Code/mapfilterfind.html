@@ -7,17 +7,18 @@
 </head>
 <body>
     <script>
-      const pessoas = [
-           "Maria", "João", "Ana", "Pedro"
-   ];
+        // MAP
+    //  const pessoas = [
+      //     "Maria", "João", "Ana", "Pedro"
+   //];
 
-    const pessoasM = pessoas.map(Upper)
+   // const pessoasM = pessoas.map(Upper)
 
-    function Upper(nomes){
-        return nomes.toUpperCase()
-    }
+    //function Upper(nomes){
+   //     return nomes.toUpperCase()
+    //}
 
-    console.log(pessoasM)
+    //console.log(pessoasM)
 
 
         // FILTER
@@ -32,6 +33,18 @@
        // console.log(maiorQue70)
 
     
+        // FIND (com inserção do usuário)
+
+    const quadras = [
+            { id: 1, setor: "A" },
+            { id: 2, setor: "B" },
+            { id: 3, setor: "C" }
+        ];
+
+        let entrada = parseInt(prompt("Digite o numero da quadra")) - 1
+        
+        const procurarQuadra = quadras.filter(entrada => entrada.id === entrada)
+        console.log(quadras[entrada])
     </script>
 </body>
 </html>
