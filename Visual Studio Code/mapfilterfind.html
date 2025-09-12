@@ -35,16 +35,41 @@
     
         // FIND (com inserção do usuário)
 
-    const quadras = [
-            { id: 1, setor: "A" },
-            { id: 2, setor: "B" },
-            { id: 3, setor: "C" }
-        ];
+   // const quadras = [
+           // { id: 1, setor: "A" },
+          //  { id: 2, setor: "B" },
+          //  { id: 3, setor: "C" }
+     //   ];
 
-        let entrada = parseInt(prompt("Digite o numero da quadra")) - 1
-        
-        const procurarQuadra = quadras.filter(entrada => entrada.id === entrada)
-        console.log(quadras[entrada])
+      //  let entrada = parseInt(prompt("Digite o numero da quadra")) - 1 
+      
+        //const procurarQuadra = quadras.filter(entrada => entrada.id === entrada)
+     //  console.log(quadras[entrada])
+
+
+        const registros = [
+            { nome: "Maria", idade: 70 },
+            { nome: "João", idade: 45 },
+            { nome: "Ana", idade: 90 },
+            { nome: "Pedro", idade: 15 }
+       ];
+
+        const maisQue70 = registros.filter(velho => velho.idade >= 70)
+        console.log("Os que tem mais de 70 são: ", maisQue70) 
+
+        const nomesRegistrados = registros.map(nomes => (nomes.nome).toUpperCase() )
+        console.log("Os nomes DESTACADOS são: ", nomesRegistrados)
+
+        let pessoaEspecifica = prompt("Digite o nome da pessoa a ser pesquisado")
+        pessoaEspecifica = pessoaEspecifica.charAt(0).toUpperCase() + pessoaEspecifica.slice(1) 
+        const encontrarPessoaEspecifica = registros.find(n => n.nome === pessoaEspecifica)
+            if(!encontrarPessoaEspecifica){
+                console.log("Pessoa não existente.")
+            }
+            else{
+        console.log("A pessoa específica requisitada encontrada foi: ", encontrarPessoaEspecifica)
+            }
+
     </script>
 </body>
 </html>
