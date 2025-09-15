@@ -12,27 +12,13 @@
                 {id: 2, titulo: "História", autor: "João", ano: 2013},
                 {id: 3, titulo: "Covarde", autor: "Gabriel", ano: 2018}
         ]
-        let tituloInput = prompt("Digite o titulo e veremos se ele esta na lista")
-        let encontrado = false
-        function funcBuscaTitulo(x){
-            for(let titulos of livros){
-                if(titulos.titulo === tituloInput){
-                    let encontrado = true
-                    console.log("Livro encontrado! Autor: "+ titulos.autor +" Ano: " + titulos.ano)
-                    return
-                }
-                else if(!encontrado){
-                    console.log("Livro não encontrado.")
-                    break
-                }
-                else{
-                    console.log("Valor inválido. Tente novamente.")
-                    break //adicionando break em cima e em baixo só pra commitar
-                }
+        let tituloMaiusculo = () => {
+            for(let objeto of livros){
+                
+                console.log(objeto.titulo.toUpperCase())
             }
-        }
-        
-        funcBuscaTitulo(tituloInput)
+        }       
+        tituloMaiusculo()
         </script>
 </body>
 </html>
